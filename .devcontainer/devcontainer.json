@@ -1,0 +1,39 @@
+{
+    "name": "devlite",
+    "initializeCommand": "/bin/bash .devcontainer/initializeCommand.sh",
+    "postCreateCommand": "/bin/bash .devcontainer/postCreateCommand.sh",
+    "postStartCommand": "/bin/bash .devcontainer/postStartCommand.sh",
+    "onCreateCommand": "/bin/bash .devcontainer/onCreateCommand.sh",
+    "postAttachCommand": "/bin/bash .devcontainer/postAttachCommand.sh",
+    "updateContentCommand": "/bin/bash .devcontainer/updateContentCommand.sh",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "ubuntu",
+    "workspaceFolder": "/READ THE readme.md FILE IN THE ROOT",
+    "containerEnv": {
+        "DEVLITE_PROJECT_NAME": "${localWorkspaceFolderBasename}",
+        "DEVLITE_LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
+        "DEVLITE_CONTAINER_WORKSPACE_FOLDER": "${containerWorkspaceFolder}",
+        "DEVLITE_LOCAL_DEVCONTAINER_FOLDER": "${localWorkspaceFolder}/.devcontainer",
+        "DEVLITE_CONTAINER_DEVCONTAINER_FOLDER": "${containerWorkspaceFolder}/.devcontainer",
+        "DEVLITE_LOCAL_SRC_FOLDER": "${localWorkspaceFolder}/src",
+        "DEVLITE_CONTAINER_SRC_FOLDER": "${containerWorkspaceFolder}/src"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:latest": {},
+        "ghcr.io/devcontainers/features/common-utils:latest": {}
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            },
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "cweijan.vscode-database-client2",
+                "mikestead.dotenv",
+                "felixfbecker.php-debug"
+            ]
+        }
+    },
+    "remoteUser": "root"
+}
