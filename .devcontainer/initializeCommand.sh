@@ -30,6 +30,10 @@ if [ "$ABORT_WORKSPACE_NAME" != "$PROJECT_NAME" ]; then
     echo -e "\e[1;33mNOTE: This command file is currently executing a\e[0m"
     echo -e "\e[1;33msleep 86400 (24 hours). Don't wait :-)\e[0m"
     echo -e ""
+    echo -e "\e[1;33mNOTE: To be sure of success, after you fix the \e[0m"
+    echo -e "\e[1;33mworkspaceFolder in your file, delete and containers/images\e[0m"
+    echo -e "\e[1;33mor volumes created by this process.\e[0m"
+    echo -e ""
     echo -e "\e[1;35m1. CTRL-C and wait for a bit for it to fail.\e[0m"
     echo -e "\e[1;35m2. You will get a Devcontainer ERROR Dialogue\e[0m"
     echo -e ""
@@ -42,7 +46,8 @@ if [ "$ABORT_WORKSPACE_NAME" != "$PROJECT_NAME" ]; then
     exit 0
 fi
 
-echo -e "\e[36;Devlite:${PROJECT_NAME} initialization successful.\e[0m"
+echo -e "\e[1;36mDevlite-Laravel:${PROJECT_NAME} initialization successful.\e[0m"
+echo -e ""
 echo -e "   -- note: If this is the first run; it may take 20+ minutes"
 echo -e "            to build this container. Subsequent runs should"
 echo -e "            only takes seconds."

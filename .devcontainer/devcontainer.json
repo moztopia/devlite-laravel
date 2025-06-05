@@ -8,7 +8,7 @@
     "updateContentCommand": "/bin/bash .devcontainer/updateContentCommand.sh",
     "dockerComposeFile": "../docker-compose.yml",
     "service": "ubuntu",
-    "workspaceFolder": "/devlite-laravel",
+    "workspaceFolder": "/STOP! Read the README.MD file!",
     "containerEnv": {
         "DEVLITE_PROJECT_NAME": "${localWorkspaceFolderBasename}",
         "DEVLITE_LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
