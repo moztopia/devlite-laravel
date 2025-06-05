@@ -47,4 +47,11 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 
+##### Install Node
+
+NODE_VERSION=current
+
+curl -fsSL "https://deb.nodesource.com/setup_${NODE_VERSION}.x" | sudo -E bash -
+sudo apt-get install -y nodejs
+
 ##### Add your changes below here. 
