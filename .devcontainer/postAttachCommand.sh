@@ -15,13 +15,18 @@ cp -f ${DEVLITE_CONTAINER_DEVCONTAINER_FOLDER}/.bash_aliases ~/.bash_aliases
 
 cd ${DEVLITE_CONTAINER_SRC_FOLDER}
 
-[ ! -d "vendor" ] && composer install
-[ ! -d "node_modules" ] && npm install
+if [ ! -d "vendor" ]; then
+    composer install
+fi
 
-[ ! -f ".env" ] && (
+if [ ! -d "node_modules" ]; then
+    npm install
+fi
+
+if [ ! -f .env ]; then
     cp ".env.devlite" ".env"
     php artisan key:generate
-    php artisan migrate:fresh
-    )
+    php artisan migrate:fresh 
+fi
 
 ##### Add your changes below here.
