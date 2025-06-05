@@ -20,8 +20,18 @@ envsubst < .env.template > .env
 ABORT_CONFIG_FILE=$PWD/.devcontainer/devcontainer.json
 ABORT_WORKSPACE_NAME=$(basename $(jq -r '.workspaceFolder' "$ABORT_CONFIG_FILE"))
 
+clear
+echo ""   
+echo "   ██████╗ ███████╗██╗   ██╗██╗     ██╗████████╗███████╗"
+echo "   ██╔══██╗██╔════╝██║   ██║██║     ██║╚══██╔══╝██╔════╝"
+echo "   ██║  ██║█████╗  ██║   ██║██║     ██║   ██║   █████╗  "
+echo "   ██║  ██║██╔══╝   ██║ ██║ ██║     ██║   ██║   ██╔══╝  "
+echo "   ██████╔╝███████╗ ╚████╔╝ ███████╗██║   ██║   ███████╗"
+echo "   ╚═════╝ ╚══════╝  ╚═══╝  ╚══════╝╚═╝   ╚═╝   ╚══════╝"
+echo "           -- L A R A V E L"   
+echo ""
+
 if [ "$ABORT_WORKSPACE_NAME" != "$PROJECT_NAME" ]; then
-    clear
     echo -e "\e[1;31mERROR: Problem detected in devcontainer.json! ABORTING\e[0m"
     echo -e ""
     echo -e "\e[1;33mPlease update 'workspaceFolder' to match your repo\e[0m"
@@ -29,10 +39,6 @@ if [ "$ABORT_WORKSPACE_NAME" != "$PROJECT_NAME" ]; then
     echo -e ""
     echo -e "\e[1;33mNOTE: This command file is currently executing a\e[0m"
     echo -e "\e[1;33msleep 86400 (24 hours). Don't wait :-)\e[0m"
-    echo -e ""
-    echo -e "\e[1;33mNOTE: To be sure of success, after you fix the \e[0m"
-    echo -e "\e[1;33mworkspaceFolder in your file, delete and containers/images\e[0m"
-    echo -e "\e[1;33mor volumes created by this process.\e[0m"
     echo -e ""
     echo -e "\e[1;35m1. CTRL-C and wait for a bit for it to fail.\e[0m"
     echo -e "\e[1;35m2. You will get a Devcontainer ERROR Dialogue\e[0m"
@@ -48,9 +54,8 @@ fi
 
 echo -e "\e[1;36mDevlite-Laravel:${PROJECT_NAME} initialization successful.\e[0m"
 echo -e ""
-echo -e "   -- note: If this is the first run; it may take 20+ minutes"
-echo -e "            to build this container. Subsequent runs should"
-echo -e "            only takes seconds."
+echo -e "   -- note: If this is the first run; it may take 20+ minutes to build"
+echo -e "            this container. Subsequent runs should only take seconds."
 echo -e ""
 
 ##### Clear the Docker Container local log folders
