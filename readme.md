@@ -1,4 +1,4 @@
-# Devlite
+# Devlite-Laravel (docs forthcoming)
 
 **Devlite** is a simple, ready-to-go development environment. Just set **a couple of** variables, open VS Code (`code .`), and start coding—**no crazy-complicated setup is required**.
 
