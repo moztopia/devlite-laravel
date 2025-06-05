@@ -42,13 +42,21 @@ if [ "$ABORT_WORKSPACE_NAME" != "$PROJECT_NAME" ]; then
     exit 0
 fi
 
-echo -e "\e[1;Devlite:${PROJECT_NAME} initialization successful.\e[0m"
+echo -e "\e[36;Devlite:${PROJECT_NAME} initialization successful.\e[0m"
+echo -e "   -- note: If this is the first run; it may take 20+ minutes"
+echo -e "            to build this container. Subsequent runs should"
+echo -e "            only takes seconds."
+echo -e ""
 
 ##### Clear the Docker Container local log folders
 
-echo "Clearing Container logs..."
+echo -e "Clearing any old container logs..."
+echo -e ""
 
 rm -f $PWD/.devcontainer/mariadb/log/*.log
 rm -f $PWD/.devcontainer/redis/log/*.log
+
+echo -e "Launching the server build/load process. Be patient..."
+echo -e ""
 
 ##### Add your changes below here.

@@ -21,7 +21,7 @@ cd ${DEVLITE_CONTAINER_SRC_FOLDER}
 [ ! -f ".env" ] && (
     cp ".env.devlite" ".env"
     php artisan key:generate
-    php artisan migrate
+    php artisan migrate:fresh
     )
 
 ##### Add your changes below here.
