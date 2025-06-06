@@ -59,6 +59,10 @@ The initial build process **can take a significant amount of time** if there are
 
 Once the initial build is complete, subsequent starts are much faster, ensuring a **lightweight and efficient development workflow**.
 
+## Troubleshooting
+
+Having trouble? The Devlite-Laravel **[Wiki](https://github.com/moztopia/devlite-laravel/wiki)** and specifically the **[Troubleshooting](https://github.com/moztopia/devlite-laravel/wiki/Troubleshooting)** section is where you should start.
+
 ## License
 
 Licensed under the **MIT License**.
