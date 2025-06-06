@@ -32,23 +32,13 @@ echo "           -- L A R A V E L"
 echo ""
 
 if [ "$ABORT_WORKSPACE_NAME" != "$PROJECT_NAME" ]; then
-    echo -e "\e[1;31mERROR: Problem detected in devcontainer.json! ABORTING\e[0m"
+    
+    echo -e "\e[33mUpdate '\e[0mworkspaceFolder\e[33m' to match your repo before starting the container."
+    echo -e "Read \e[0m/readme.md\e[33m and follow instructions (under 30 sec)."
+    echo -e "CTRL-C to cancel execution.\e[0m ... \e[31mABORTING\e[0m"
     echo -e ""
-    echo -e "\e[1;33mPlease update 'workspaceFolder' to match your repo\e[0m"
-    echo -e "\e[1;33mfolder before starting the container.\e[0m"
-    echo -e ""
-    echo -e "\e[1;33mNOTE: This command file is currently executing a\e[0m"
-    echo -e "\e[1;33msleep 86400 (24 hours). Don't wait :-)\e[0m"
-    echo -e ""
-    echo -e "\e[1;35m1. CTRL-C and wait for a bit for it to fail.\e[0m"
-    echo -e "\e[1;35m2. You will get a Devcontainer ERROR Dialogue\e[0m"
-    echo -e ""
-    echo -e "\e[1;35m4. Read the /readme.md and follow the instructions.\e[0m"
-    echo -e ""
-    echo -e "\e[1;33mCompleting the instructions takes less than 30 seconds.\e[0m"
 
-    sleep 86400
-
+    sleep 8640000
     exit 0
 fi
 
