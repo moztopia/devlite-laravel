@@ -1,7 +1,5 @@
 # Devlite-Laravel
 
-**If you see this screen, you need to open the readme.md file and spend 30 seconds configuring this tool.**
-
 Want to support this project? [Buy Me a Beer!](https://coff.ee/mozrin)
 
 **Laravel** is a robust and easy to use (free) PHP framework. If I need to get an application off the ground with 1 to a few million users; this is my tool of choice. You can find out more on their website: https://laravel.com
